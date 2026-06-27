@@ -73,3 +73,22 @@ button:hover{
         transform:translateY(100px);
     }
 }
+.gallery{
+        display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+                gap:15px;
+                    margin-top:20px;
+                    }
+
+                    .gallery img{
+                        width:100%;
+                            border-radius:15px;
+                                box-shadow:0 0 15px rgba(255,255,255,.3);
+                                    transition:.4s;
+                                        cursor:pointer;
+                                        }
+
+                                        .gallery img:hover{
+                                            transform:scale(1.05);
+                                            }
+

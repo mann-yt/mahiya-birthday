@@ -64,6 +64,18 @@ document.getElementById("startBtn").addEventListener("click", function () {
                                                                                                                                                                                                                                                                                                         
      May your smile always shine as brightly as it does today. ✨🎂❤️
     </p>
+
+    <h2>📸 Beautiful Memories ❤️</h2>
+
+    <div class="gallery">
+      <img src="IMG-20260621-WA0027.jpg">
+        <img src="IMG-20260220-WA0020.jpg">
+          <img src="IMG-20260206-WA0087.jpg">
+            <img src="IMG-20260129-WA0009.jpg">
+              <img src="IMG-20260129-WA0006.jpg">
+                <img src="IMG-20260129-WA0005.jpg">
+                  <img src="IMG-20260123-WA0089.jpg">
+                  </div>
                                                                                                                                                                                                                                                                                                                             
       <button onclick="location.reload()">
         Start Again 🎁
