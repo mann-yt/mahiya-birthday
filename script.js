@@ -1,5 +1,8 @@
 document.getElementById("startBtn").addEventListener("click", function () {
 
+  const music = document.getElementById("bgMusic");
+  music.play();
+
  document.body.style.transition = "1s";
  document.body.style.background =
  "linear-gradient(135deg,#8e44ad,#ff6ec7,#ffd166)";
