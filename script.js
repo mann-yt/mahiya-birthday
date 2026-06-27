@@ -54,6 +54,7 @@ document.getElementById("startBtn").addEventListener("click", function () {
                  }
 
      function showLetter() {    document.querySelector(".container").innerHTML = `
+
      <h1>💌 A Letter For You</h1>
                                                                                                                                                                                                                                                             
       <p style="font-size:20px;line-height:1.8;">
@@ -67,18 +68,32 @@ document.getElementById("startBtn").addEventListener("click", function () {
 
     <h2>📸 Beautiful Memories ❤️</h2>
 
-    <div class="gallery">
-      <img src="IMG-20260621-WA0027.jpg">
-        <img src="IMG-20260220-WA0020.jpg">
-          <img src="IMG-20260206-WA0087.jpg">
-            <img src="IMG-20260129-WA0009.jpg">
-              <img src="IMG-20260129-WA0006.jpg">
-                <img src="IMG-20260129-WA0005.jpg">
-                  <img src="IMG-20260123-WA0089.jpg">
-                  </div>
+    <div class="slideshow">
+        <img id="slide" src="IMG-20260621-WA0027.jpg">
+        </div>
                                                                                                                                                                                                                                                                                                                             
       <button onclick="location.reload()">
         Start Again 🎁
          </button>
                      `;
+                     startSlideshow();
                      }
+const photos = [
+  "IMG-20260621-WA0027.jpg",
+  "IMG-20260220-WA0020.jpg",
+  "IMG-20260206-WA0087.jpg",
+  "IMG-20260129-WA0009.jpg",
+  "IMG-20260129-WA0006.jpg",
+  "IMG-20260129-WA0005.jpg",
+  "IMG-20260123-WA0089.jpg"
+  ];
+
+  function startSlideshow() {
+      let i = 0;
+          const slide = document.getElementById("slide");
+
+              setInterval(() => {
+                      i = (i + 1) % photos.length;
+                              slide.src = photos[i];
+                                  }, 2500);
+                                  }
