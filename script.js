@@ -66,6 +66,9 @@ document.getElementById("startBtn").addEventListener("click", function () {
      May your smile always shine as brightly as it does today. ✨🎂❤️
     </p>
 
+    <h2>⏳ Time Since Your Birthday</h2>
+    <div id="countdown" style="font-size:22px;font-weight:bold;margin:20px 0;"></div>
+
     <h2>📸 Beautiful Memories ❤️</h2>
 
     <div class="slideshow">
@@ -77,6 +80,7 @@ document.getElementById("startBtn").addEventListener("click", function () {
          </button>
                      `;
                      startSlideshow();
+                     updateCountdown();
                      }
 const photos = [
   "IMG-20260621-WA0027.jpg",
@@ -97,3 +101,23 @@ const photos = [
                               slide.src = photos[i];
                                   }, 2500);
                                   }
+                                  function updateCountdown() {
+                                        const birthday = new Date("2026-06-29T00:00:00");
+
+                                            function tick() {
+                                                    const now = new Date();
+                                                            const diff = now - birthday;
+
+                                                                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                                                                            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                                                                                    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                                                                                            const seconds = Math.floor((diff / 1000) % 60);
+
+                                                                                                    document.getElementById("countdown").innerHTML =
+                                                                                                                `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+                                                                                                                    }
+
+                                                                                                                        tick();
+                                                                                                                            setInterval(tick, 1000);
+                                                                                                                            }
+                                  
