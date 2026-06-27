@@ -6,14 +6,19 @@
 }
 
 body{
+        
     min-height:100vh;
-    background:linear-gradient(135deg,#ff9ecf,#ffc0cb,#ffe4ec);
-    overflow-y: auto;
-    overflow-x: hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+        background: linear-gradient(135deg,#ff9ecf,#ffc0cb,#ffe4e1);
+                overflow-y:auto;
+                    overflow-x:hidden;
+
+                        display:flex;
+                            justify-content:center;
+                                align-items:flex-start;
+
+                                    padding:20px 0;
+                                    }
+
 
 .container{
     width:90%;
